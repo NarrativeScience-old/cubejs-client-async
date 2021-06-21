@@ -1,34 +1,30 @@
-# my-package-name
+# cubejsclient
 
-[![](https://img.shields.io/pypi/v/my-package-name.svg)](https://pypi.org/pypi/my-package-name/) [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+[![](https://img.shields.io/pypi/v/cubejsclient.svg)](https://pypi.org/pypi/cubejsclient/) [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
-<!-- Short description of the package -->
+Async Python Cube.js client
 
 Features:
 
-- <!-- list of features -->
+- Cube.js API client that makes async requests
+- Rich objects for building queries with measures, dimensions, etc.
 
 Table of Contents:
 
 - [Installation](#installation)
-- [Guide](#guide)
 - [Development](#development)
 
 ## Installation
 
-my-package-name requires Python 3.6 or above.
+cubejsclient requires Python 3.6 or above.
 
 ```bash
-pip install mypackagename
+pip install cubejsclient
 ```
-
-## Guide
-
-<!-- Subsections explaining how to use the package -->
 
 ## Development
 
-To develop my-package-name, install dependencies and enable the pre-commit hook:
+To develop cubejsclient, install dependencies and enable the pre-commit hook:
 
 ```bash
 pip install pre-commit poetry
