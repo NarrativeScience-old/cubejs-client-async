@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "mypackagename"
+version = "0.1.0"
+description = "My package does cool stuff"
+authors = ["Your Name <person@narrativescience.com>"]
+license = "BSD-3-Clause"
+readme = "README.md"
+homepage = "https://github.com/NarrativeScience/my-package-name"
+repository = "https://github.com/NarrativeScience/my-package-name"
+
+[tool.poetry.dependencies]
+python = "^3.6.5"
+
+[tool.poetry.dev-dependencies]
+pre-commit = "^2.10.1"
+pytest = "^6.2.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
