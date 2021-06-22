@@ -2,7 +2,16 @@
 
 import unittest
 
-from cubejsclient import Cube, DateRange, Order, Query, TimeDimension, TimeGranularity
+from cubejsclientasync import (
+    Cube,
+    DateRange,
+    Order,
+    Query,
+    TimeDimension,
+    TimeGranularity,
+)
+from cubejsclientasync.enums import FilterOperator
+from cubejsclientasync.filters import And, Filter
 
 
 class QueryTests(unittest.TestCase):
@@ -21,17 +30,31 @@ class QueryTests(unittest.TestCase):
                     granularity=TimeGranularity.month,
                 )
             ],
+            filters=[
+                And(Filter(cube.dimension("state"), FilterOperator.equals, ["WA"]))
+            ],
             order=[(cube.dimension("bar"), Order.asc)],
         )
         self.assertEqual(
             q.serialize(),
             {
                 "measures": ["c__app-123__us_accidents.foo"],
-                "time_dimensions": [
+                "timeDimensions": [
                     {
                         "dimension": "c__app-123__us_accidents.time",
                         "dateRange": "last year",
                         "granularity": "month",
+                    }
+                ],
+                "filters": [
+                    {
+                        "and": [
+                            {
+                                "member": "c__app-123__us_accidents.state",
+                                "operator": "equals",
+                                "values": ["WA"],
+                            }
+                        ]
                     }
                 ],
                 "limit": 10000,

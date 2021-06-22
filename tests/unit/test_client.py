@@ -3,7 +3,7 @@
 import asyncio
 import unittest
 
-from cubejsclient import (
+from cubejsclientasync import (
     Cube,
     CubeClient,
     DateRange,

@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "cubejsclient"
+name = "cubejsclientasync"
 version = "0.1.0"
 description = "Async Python Cube.js client"
 authors = ["Jonathan Drake <jdrake@narrativescience.com>"]
