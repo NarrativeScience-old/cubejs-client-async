@@ -1,6 +1,6 @@
-# cubejsclient
+# cubejsclientasync
 
-[![](https://img.shields.io/pypi/v/cubejsclient.svg)](https://pypi.org/pypi/cubejsclient/) [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+[![](https://img.shields.io/pypi/v/cubejsclientasync.svg)](https://pypi.org/pypi/cubejsclientasync/) [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
 Async Python Cube.js client
 
@@ -16,15 +16,15 @@ Table of Contents:
 
 ## Installation
 
-cubejsclient requires Python 3.6 or above.
+cubejsclientasync requires Python 3.6 or above.
 
 ```bash
-pip install cubejsclient
+pip install cubejsclientasync
 ```
 
 ## Development
 
-To develop cubejsclient, install dependencies and enable the pre-commit hook:
+To develop cubejsclientasync, install dependencies and enable the pre-commit hook:
 
 ```bash
 pip install pre-commit poetry

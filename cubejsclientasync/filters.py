@@ -20,8 +20,10 @@ class DateRange:
         """Initializer
 
         Args:
-            start_date: Start date for the absolute range
-            end_date: End date for the absolute range
+            start_date: Start date for the absolute range. Format `YYYY-MM-DD`
+                or `YYYY-MM-DDTHH:mm:ss.SSS`.
+            end_date: End date for the absolute range. Format `YYYY-MM-DD`
+                or `YYYY-MM-DDTHH:mm:ss.SSS`.
             relative: Relative date range, e.g. "this month"
 
         """
@@ -134,12 +136,12 @@ class Filter:
         }
 
 
-class BooleanOperator:
+class BooleanExpression:
     """Represents a boolean operator in a filter"""
 
     operator: str
 
-    def __init__(self, *operands: Union["BooleanOperator", Filter]) -> None:
+    def __init__(self, *operands: Union["BooleanExpression", Filter]) -> None:
         """Initializer
 
         Args:
@@ -158,13 +160,13 @@ class BooleanOperator:
         return {self.operator: [o.serialize() for o in self.operands]}
 
 
-class Or(BooleanOperator):
+class Or(BooleanExpression):
     """Boolean operator for `or`"""
 
     operator = "or"
 
 
-class And(BooleanOperator):
+class And(BooleanExpression):
     """Boolean operator for `and`"""
 
     operator = "and"
